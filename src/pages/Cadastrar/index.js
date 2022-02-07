@@ -69,10 +69,10 @@ export const Cadastrar = () => {
     <Container>
       <ConteudoForm>
         <ConteudoTitulo>
-          <Titulo>Cadastrar</Titulo>
+          <Titulo>Cadastrar Vendedor</Titulo>
           <BtnAcao>
             <Link to={"/"}>
-              <ButtonInfo>Listar</ButtonInfo>
+              <ButtonInfo>Listar Vendedores</ButtonInfo>
             </Link>
           </BtnAcao>
         </ConteudoTitulo>

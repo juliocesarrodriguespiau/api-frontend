@@ -8,6 +8,7 @@ import {
 
 import { Home } from './pages/Home';
 import { Cadastrar } from './pages/Cadastrar';
+import { Visualizar } from './pages/Visualizar';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/' element={<Home/>} /> 
-          <Route path='/Cadastrar' element={<Cadastrar/>} /> 
+          <Route path='/cadastrar' element={<Cadastrar/>} /> 
+          <Route path='/visualizar/:id' element={<Visualizar/>} /> 
         </Routes>
       </Router>
     </div>

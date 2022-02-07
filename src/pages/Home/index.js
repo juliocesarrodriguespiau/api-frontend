@@ -7,7 +7,8 @@ import {
   BtnAcao,
   ButtonSuccess,
   Table, 
-  Titulo 
+  Titulo,
+  ButtonPrimary
 } from './styles';
 
 export const Home = () => {
@@ -31,10 +32,10 @@ export const Home = () => {
   return (
     <Container>
       <ConteudoTitulo>
-        <Titulo>Listar</Titulo>
+        <Titulo>Listar Vendedores</Titulo>
         <BtnAcao>
           <Link to={"/cadastrar"}>
-            <ButtonSuccess>Cadastrar</ButtonSuccess>
+            <ButtonSuccess>Cadastrar Vendedor</ButtonSuccess>
           </Link>
         </BtnAcao>
       </ConteudoTitulo>
@@ -53,7 +54,12 @@ export const Home = () => {
               <td>{vendedor.id}</td>
               <td>{vendedor.nome}</td>
               <td>{vendedor.email}</td>
-              <td>Vizualizar Editar Apagar</td>
+              <td>
+                <Link to={"/visualizar/" + vendedor.id}>
+                  <ButtonPrimary>Detalhes</ButtonPrimary>
+                </Link>
+                Editar Apagar
+              </td>
             </tr>
           ))}
         </tbody>
