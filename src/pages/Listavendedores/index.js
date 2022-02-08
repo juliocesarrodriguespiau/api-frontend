@@ -15,9 +15,9 @@ export const Listavendedores = () => {
 
   const [data, setData] = useState([]);
 
-  const getVendedores = async () => {
+  const getListaVendedores = async () => {
     //console.log("Listar Vendedores");
-    fetch("http://localhost/api/index.php")
+    fetch("http://localhost/api/listavendedores.php")
     .then((response) => response.json())
     .then((responseJson) => (
       //console.log(responseJson),
@@ -26,7 +26,7 @@ export const Listavendedores = () => {
   }
 
   useEffect(() => {
-    getVendedores();
+    getListaVendedores();
   },[])
 
   return (
@@ -42,21 +42,22 @@ export const Listavendedores = () => {
       <Table>
         <thead>
           <tr>
+            <th>Id Vendedor</th>
             <th>Nome Vendedor</th>
             <th>Email</th>
-            <th>Id Vendedor</th>
             <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           {Object.values(data).map(vendedor => (
+            // <tr key={vendedor.id}>
             <tr key={vendedor.id}>
+              <td>{vendedor.id_vendedor}</td>
               <td>{vendedor.nome}</td>
               <td>{vendedor.email}</td>
-              <td>{vendedor.id_vendedor}</td>
               <td>
                 <Link to={"/visualizar/" + vendedor.id}>
-                  <ButtonPrimary>Detalhes</ButtonPrimary>
+                  <ButtonPrimary>Consolidado Vendedor</ButtonPrimary>
                 </Link>
               </td>
             </tr>

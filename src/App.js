@@ -11,6 +11,7 @@ import { Cadastrar } from './pages/Cadastrar';
 import { Visualizar } from './pages/Visualizar';
 import { Cadastrarvendedor } from './pages/Cadastrarvendedor';
 import { Listavendedores } from './pages/Listavendedores';
+// import { Consolidadovendedores } from './pages/Consolidadovendedores';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path='/visualizar/:id' element={<Visualizar/>} /> 
           <Route path='/cadastrarvendedor' element={<Cadastrarvendedor/>} />
           <Route path='/listavendedores' element={<Listavendedores/>} />
+          {/* <Route path='/consolidadovendedor/:id' element={<Consolidadovendedores/>} /> */}
         </Routes>
       </Router>
     </div>

@@ -91,8 +91,8 @@ export const Cadastrar = () => {
             <Label>Descrição Venda: </Label>
             <Input type='text' name='descricao_venda' placeholder='Descrição Venda' onChange={valorInput} /><br /><br />
 
-            {/* <Label>Comissão Vendedor: </Label>
-            <Input type='text' name='comissao' placeholder='Comissão do Vendedor' onChange={valorInput} /><br /><br /> */}
+            <Label>Comissão Vendedor: </Label>
+            <Input type='text' name='comissao' placeholder='Comissão do Vendedor' onChange={valorInput} /><br /><br />
 
             <Label>Valor da Venda: </Label>
             <Input type='text' name='valor_venda' placeholder='Valor Venda' onChange={valorInput} /><br /><br />
