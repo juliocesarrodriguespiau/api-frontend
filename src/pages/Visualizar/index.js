@@ -38,16 +38,21 @@ export const Visualizar = (props) => {
     return (
         <Container>
             <ConteudoTitulo>
-                <Titulo>Detalhes Vendedor</Titulo>
+                <Titulo>Visualizar Detalhes da Venda</Titulo>
                 <BtnAcao>
                     <Link to={"/"}>
-                        <ButtonInfo>Listar Vendedores</ButtonInfo>
+                        <ButtonInfo>Listar Vendas</ButtonInfo>
                     </Link>
                 </BtnAcao>
             </ConteudoTitulo>
-            <ConteudoVendedor>Id: {vendedor.id}</ConteudoVendedor>
-            <ConteudoVendedor>Nome: {vendedor.nome}</ConteudoVendedor>
+            <ConteudoVendedor>Id Venda: {vendedor.id}</ConteudoVendedor>
+            <ConteudoVendedor>Nome Vendedor: {vendedor.nome}</ConteudoVendedor>
             <ConteudoVendedor>E-mail: {vendedor.email}</ConteudoVendedor>
+            <ConteudoVendedor>Id Vendedor: {vendedor.id_vendedor}</ConteudoVendedor>
+            <ConteudoVendedor>Descrição Venda: {vendedor.descricao_venda}</ConteudoVendedor>
+            <ConteudoVendedor>Comissão Vendedor: {vendedor.comissao}</ConteudoVendedor>
+            <ConteudoVendedor>Valor da Venda: {vendedor.valor_venda}</ConteudoVendedor>
+            <ConteudoVendedor>Data Venda: {vendedor.data_venda}</ConteudoVendedor>
         </Container>
     );
 }

@@ -16,7 +16,7 @@ import {
   ButtonSuccess
 } from './styles';
 
-export const Cadastrar = () => {
+export const Cadastrarvendedor = () => {
 
   const [vendedor, setVendedor] = useState({
     nome: '',
@@ -30,11 +30,11 @@ export const Cadastrar = () => {
 
   const valorInput = e => setVendedor({ ...vendedor, [e.target.name]: e.target.value });
 
-  const cadVenda = async e => {
+  const cadVendedor = async e => {
     e.preventDefault();
     //console.log(vendedor.nome);
 
-    await fetch("http://localhost/api/cadastrar.php", {
+    await fetch("http://localhost/api/cadastrarvendedor.php", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ export const Cadastrar = () => {
     <Container>
       <ConteudoForm>
         <ConteudoTitulo>
-          <Titulo>Cadastrar Venda</Titulo>
+          <Titulo>Cadastrar Vendedor</Titulo>
           <BtnAcao>
             <Link to={"/"}>
               <ButtonInfo>Listar Vendas</ButtonInfo>
@@ -78,7 +78,7 @@ export const Cadastrar = () => {
         </ConteudoTitulo>
           {status.type === 'erro' ? <AlertaSuccess>{status.mensagem}</AlertaSuccess> : ""}
           {status.type === 'success' ? <AlertaDanger>{status.mensagem}</AlertaDanger> : ""}
-          <Form onSubmit={cadVenda}>
+          <Form onSubmit={cadVendedor}>
             <Label>Nome do Vendedor: </Label>
             <Input type='text' name='nome' placeholder='Nome do Vendedor' onChange={valorInput} /><br /><br />
 
@@ -87,18 +87,6 @@ export const Cadastrar = () => {
 
             <Label>Id Vendedor: </Label>
             <Input type='text' name='id_vendedor' placeholder='ID Vendedor' onChange={valorInput} /><br /><br />
-
-            <Label>Descrição Venda: </Label>
-            <Input type='text' name='descricao_venda' placeholder='Descrição Venda' onChange={valorInput} /><br /><br />
-
-            {/* <Label>Comissão Vendedor: </Label>
-            <Input type='text' name='comissao' placeholder='Comissão do Vendedor' onChange={valorInput} /><br /><br /> */}
-
-            <Label>Valor da Venda: </Label>
-            <Input type='text' name='valor_venda' placeholder='Valor Venda' onChange={valorInput} /><br /><br />
-
-            <Label>Data Venda: </Label>
-            <Input type='text' name='data_venda' placeholder='Data Venda' onChange={valorInput} /><br /><br />
 
             <ButtonSuccess type='submit'>Cadastrar</ButtonSuccess>
           </Form>
