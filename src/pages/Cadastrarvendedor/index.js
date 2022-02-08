@@ -71,8 +71,8 @@ export const Cadastrarvendedor = () => {
         <ConteudoTitulo>
           <Titulo>Cadastrar Vendedor</Titulo>
           <BtnAcao>
-            <Link to={"/"}>
-              <ButtonInfo>Listar Vendas</ButtonInfo>
+            <Link to={"/listavendedores"}>
+              <ButtonInfo>Listar Vendedoress</ButtonInfo>
             </Link>
           </BtnAcao>
         </ConteudoTitulo>
