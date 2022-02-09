@@ -1,4 +1,10 @@
-SEQUENCIA PARA CRIAR O PROJETO
+# Aplicação
+
+A aplicação foi criada utilizando ReactJS.
+
+A interação com a paginação, consulta vendas, cadastro de vendedor e vendas são realizadas a partir da integração com os endpoints disponibilizados pelo Backend.
+
+## Dependências
 
 Criar o Projeto ReactJS - https://pt-br.reactjs.org/docs/create-a-new-react-app.html
 ### npx create-react-app my-app
