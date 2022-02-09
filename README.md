@@ -1,6 +1,6 @@
 # Aplicação
 
-A aplicação foi criada utilizando ReactJS.
+A aplicação foi criada utilizando JavaScript - ReactJS.
 
 A interação com a paginação, consulta vendas, cadastro de vendedor e vendas são realizadas a partir da integração com os endpoints disponibilizados pelo Backend.
 
