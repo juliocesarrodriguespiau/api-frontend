@@ -17,7 +17,7 @@ export const Listavendedores = () => {
 
   const getListaVendedores = async () => {
     //console.log("Listar Vendedores");
-    fetch("http://localhost/api/listavendedores.php")
+    fetch("http://localhost/api/api/listavendedores.php")
     .then((response) => response.json())
     .then((responseJson) => (
       //console.log(responseJson),

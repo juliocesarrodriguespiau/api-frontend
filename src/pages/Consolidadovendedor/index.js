@@ -25,7 +25,7 @@ export const Consolidadovendedor = (props) => {
 
     useEffect(() => {
         const getVendedor = async () => {
-            await fetch("http://localhost/api/consolidadovendedor.php?id_vendedor=" + id_vendedor)
+            await fetch("http://localhost/api/api/consolidadovendedor.php?id_vendedor=" + id_vendedor)
                 .then((response) => response.json())
                 .then((responseJson) => {
                     console.log(responseJson);

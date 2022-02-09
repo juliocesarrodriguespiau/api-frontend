@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { 
   Container, 
@@ -32,9 +32,9 @@ export const Cadastrar = () => {
 
   const cadVenda = async e => {
     e.preventDefault();
-    //console.log(vendedor.nome);
+    console.log(vendedor.nome);
 
-    await fetch("http://localhost/api/cadastrar.php", {
+    await fetch("http://localhost/api/api/cadastrar.php", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -48,19 +48,19 @@ export const Cadastrar = () => {
         console.log(responseJson.type)
         if (responseJson.erro) {
           setStatus({
-            type: 'success',
+            type: 'erro',
             mensagem: responseJson.mensagem
           });
         } else {
           setStatus({
-            type: 'erro',
+            type: 'success',
             mensagem: responseJson.mensagem
           });
         }
       }).catch(() => {
         setStatus({
           type: 'erro',
-          mensagem: 'Vendedor não cadastrado(via api), tente mais tarde!'
+          mensagem: 'Venda cadastrada(via api)!'
         });
       })
   }
@@ -91,8 +91,8 @@ export const Cadastrar = () => {
             <Label>Descrição Venda: </Label>
             <Input type='text' name='descricao_venda' placeholder='Descrição Venda' onChange={valorInput} /><br /><br />
 
-            <Label>Comissão Vendedor: </Label>
-            <Input type='text' name='comissao' placeholder='Comissão do Vendedor' onChange={valorInput} /><br /><br />
+            {/* <Label>Comissão Vendedor: </Label>
+            <Input type='text' name='comissao' placeholder='Comissão do Vendedor' onChange={valorInput} /><br /><br /> */}
 
             <Label>Valor da Venda: </Label>
             <Input type='text' name='valor_venda' placeholder='Valor Venda' onChange={valorInput} /><br /><br />

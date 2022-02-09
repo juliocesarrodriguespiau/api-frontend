@@ -17,7 +17,7 @@ export const Home = () => {
 
   const getVendedores = async () => {
     //console.log("Listar Vendedores");
-    fetch("http://localhost/api/index.php")
+    fetch("http://localhost/api/api/index.php")
     .then((response) => response.json())
     .then((responseJson) => (
       //console.log(responseJson),
@@ -55,9 +55,9 @@ export const Home = () => {
             <th>Id Venda</th>
             <th>Nome Vendedor</th>
             <th>Email</th>
-            <th>Id Vendedor</th>
+            {/* <th>Id Vendedor</th> */}
             <th>Descrição Venda</th>
-            <th>Comissão Vendedor</th>
+            {/* <th>Comissão Vendedor</th> */}
             <th>Valor da Venda</th>
             <th>Data Venda</th>
             <th>Ações</th>
@@ -69,9 +69,9 @@ export const Home = () => {
               <td>{vendedor.id}</td>
               <td>{vendedor.nome}</td>
               <td>{vendedor.email}</td>
-              <td>{vendedor.id_vendedor}</td>
+              {/* <td>{vendedor.id_vendedor}</td> */}
               <td>{vendedor.descricao_venda}</td>
-              <td>{vendedor.comissao}</td>
+              {/* <td>{vendedor.comissao}</td> */}
               <td>{vendedor.valor_venda}</td>
               <td>{vendedor.data_venda}</td>
               <td>

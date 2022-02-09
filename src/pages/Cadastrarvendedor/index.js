@@ -34,7 +34,7 @@ export const Cadastrarvendedor = () => {
     e.preventDefault();
     //console.log(vendedor.nome);
 
-    await fetch("http://localhost/api/cadastrarvendedor.php", {
+    await fetch("http://localhost/api/api/cadastrarvendedor.php", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

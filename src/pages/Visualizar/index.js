@@ -21,11 +21,12 @@ export const Visualizar = (props) => {
     //     nome: '',
     //     email: ''
     // });
+
     const [vendedor, setData] = useState([]);
 
     useEffect(() => {
         const getVendedor = async () => {
-            await fetch("http://localhost/api/visualizar.php?id=" + id)
+            await fetch("http://localhost/api/api/visualizar.php?id=" + id)
                 .then((response) => response.json())
                 .then((responseJson) => {
                     console.log(responseJson);
