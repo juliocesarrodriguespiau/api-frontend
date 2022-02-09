@@ -56,7 +56,7 @@ export const Listavendedores = () => {
               <td>{vendedor.nome}</td>
               <td>{vendedor.email}</td>
               <td>
-                <Link to={"/visualizar/" + vendedor.id}>
+                <Link to={"/consolidadovendedor/" + vendedor.id_vendedor}>
                   <ButtonPrimary>Consolidado Vendedor</ButtonPrimary>
                 </Link>
               </td>
